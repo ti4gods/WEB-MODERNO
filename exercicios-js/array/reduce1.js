@@ -1,4 +1,4 @@
-// Processa um arrau retornando apenas um valor final
+// Processa um array retornando apenas um valor final
 // Pode receber como parâmetro um valor inicial
 
 const alunos = [
