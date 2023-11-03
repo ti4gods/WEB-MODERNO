@@ -1,5 +1,7 @@
-~$otações.docx
-Anotações.docx
-arquivos/Exercicios__Javascript.pdf
-arquivos/Exercicios_de_Programacao.pdf
-arquivos/Exercicios_de_Programao_Resolucao.pdf
+node_modules
+
+# Ignora todos os arquivos .docx
+*.docx
+
+# Ignora todos os arquivos .pdf
+*.pdf
