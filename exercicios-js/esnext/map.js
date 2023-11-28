@@ -1,5 +1,5 @@
-// Um Map é uma estrutura de dados que permite associar valores a chaves, 
-// onde as chaves podem ser de vários tipos, incluindo funções, objetos e números.
+// Um Map é uma estrutura de dados que permite associar valores a chaves,
+// onde as chaves podem ser de vários tipos, incluindo funções, objetos e números..
 
 const tecnologias = new Map()
 tecnologias.set('react', { framework: false })
@@ -10,13 +10,13 @@ console.log(tecnologias.get('react')) // { framework: false }
 console.log(tecnologias.get('react').framework) // false
 
 const chavesVariadas = new Map([
-  [function () {}, 'Função'],
-  [{}, 'Objeto'],
-  [123, 'Número'],
+    [function () {}, 'Função'],
+    [{}, 'Objeto'],
+    [123, 'Número'],
 ])
 
 chavesVariadas.forEach((vl, ch) => {
-  console.log(ch, vl)
+    console.log(ch, vl)
 })
 
 // [Function (anonymous)] Função
