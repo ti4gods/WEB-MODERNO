@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1> Exercícios HTML </h1>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav>
+        <!-- Link para o arquivo "exercicios/teste.html" com atributo personalizado "wm-nav" -->
+        <a href="exercicios/teste.html" wm-nav>00 - Teste</a>
+    </nav>
+
+    <!-- Seção de conteúdo dinâmico que será carregado via JavaScript -->
+    <section id="conteudo">
+
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+
+    <!-- Script JavaScript para carregar conteúdo dinâmico ao clicar nos links da navegação -->
+    <script>
+        // Seleciona todos os elementos com o atributo personalizado "wm-nav"
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            // Obtém a referência para o elemento com o ID 'conteudo'
+            const conteudo = document.getElementById('conteudo')
+
+            // Define a ação a ser executada quando o link for clicado
+            link.onclick = function (evento) {
+                // Impede o comportamento padrão do link (navegação para outra página)
+                evento.preventDefault()
+
+                // Realiza uma requisição para obter o conteúdo do link especificado
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resposta => resposta.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        }) 
+    </script>
+</body>
+
+</html>
