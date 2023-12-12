@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +21,10 @@
     <!-- Barra de navegação -->
     <nav>
         <!-- Link para o arquivo "exercicios/teste.html" com atributo personalizado "wm-nav" -->
-        <a href="exercicios/teste.html" wm-nav>00 - Teste</a>
+        <a href wm-nav="exercicios/teste.html"> 00 - Teste</a> |
+        <a href wm-nav="exercicios/texto1.html"> 01 - Texto 1</a> |
+        <a href wm-nav="exercicios/texto2.html"> 02 - Texto 2</a> |
+        <a href wm-nav="exercicios/listas.html"> 03 - Listas</a>
     </nav>
 
     <!-- Seção de conteúdo dinâmico que será carregado via JavaScript -->
@@ -26,7 +34,6 @@
 
     <!-- Rodapé da página -->
     <footer>
-        <br>
         Curso de Web Moderno
     </footer>
 
