@@ -2,8 +2,9 @@
 <h1>Formulário</h1>
 
 <!-- Formulário HTML com método POST e ação apontando para o endpoint '/usuarios' no servidor Express -->
-<form action="http://127.0.0.1:3003/usuarios" method="POST">
+<form method="POST">
     <!-- Campo de entrada de texto com o nome 'propriedadeNome' -->
+    <input type="hidden" name="propriedadeId" value = 3>
     <input type="text" name="propriedadeNome">
     <input type="password" name="senha">
     <textarea name="propriedadeBio" cols="30" rows="10"></textarea>
@@ -36,8 +37,8 @@
 
 
     <!-- Botão de envio do formulário -->
-    <button formaction="">Incluir</button>
-    <button>Alterar</button>
+    <button formaction="http://127.0.0.1:3003/usuarios">Incluir</button>
+    <button formaction="http://127.0.0.1:3003/usuarios/3">Alterar</button>
 </form>
 
 <style>
