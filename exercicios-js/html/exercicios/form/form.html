@@ -1,0 +1,55 @@
+<!-- Título do formulário -->
+<h1>Formulário</h1>
+
+<!-- Formulário HTML com método POST e ação apontando para o endpoint '/usuarios' no servidor Express -->
+<form action="http://127.0.0.1:3003/usuarios" method="POST">
+    <!-- Campo de entrada de texto com o nome 'propriedadeNome' -->
+    <input type="text" name="propriedadeNome">
+    <input type="password" name="senha">
+    <textarea name="propriedadeBio" cols="30" rows="10"></textarea>
+    
+    <div>
+        <input type="radio" name="propriedadeTipo" value="admin"> Admin
+        <input type="radio" name="propriedadeTipo" value="regular"> Regular
+        <input type="radio" name="propriedadeTipo" value="professor"> Professor
+    </div>
+
+    <div>
+        <input type="checkbox" name="propriedadeAtivo"> Ativo
+    </div>
+
+    <select name="propriedadeEstado">
+        <option value="">Selecione</option>
+        <option value="ac">Acre</option>   
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceará</option>
+    </select>
+
+    <select name="propriedadeInteresses" multiple size="5">
+        <option value="js">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+        <option value="python">Python</option>
+        <option value="go">Go</option>
+        <option value="c">C</option>
+    </select>
+
+
+    <!-- Botão de envio do formulário -->
+    <button formaction="">Incluir</button>
+    <button>Alterar</button>
+</form>
+
+<style>
+    input,
+    select,
+    textarea {
+        display: block;
+        margin-bottom:  10px;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline;
+    }
+</style>
